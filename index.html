@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detector de objetos dinamicos</title>
-
+    <title>IA Localizadora de Objetos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-  
-    <!-- <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> -->
     <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body background="camera.webp">
+<body background="sala1.webp">
     <center>
-        <h1 style="color: aliceblue; font-size: 18px; font-family: cursive;" class="btn btn-success">IA de vigilância por video</h1>
-        <br> <br>
-        <button id="start" class="btn btn-info" onclick="start()" style="font-family: cursive;">Iniciar</button>
-        <br> 
-        <h3 id="numObj" class="btn btn-danger"></h3> <br>
-        <h3 id="status" class="btn btn-warning"></h3>
+        <h1 class="btn btn-primary heading" style="font-family: cursive;">IA Localizadora de Objetos</h1>
+        <br><br>
+        <input type="text" id="objectName" placeholder="Digite o nome do objeto" class="form-control" style="width: 300px;">
+        <br>
+        <h3 id="status" class="btn btn-success">Status: Aguardando Início</h3>
+        <h3 id="qtdObj" class="btn btn-primary">Quantidade de objetos detectados: 0</h3>
+        <br>
+        <button onclick="start()" class="btn btn-danger">Iniciar</button>
+        <div id="canvasContainer"></div>
     </center>
-    <div class="copyrightFooter">Desenvolvido por Pedro H</div>
     <script src="main.js"></script>
 </body>
 </html>
